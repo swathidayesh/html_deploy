@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-blue-50">
+
+    <!-- Header Section -->
+    <header class="bg-blue-600 text-white py-6">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-2xl font-semibold flex items-center">
+                <img src="https://azure.microsoft.com/svghandler/azure-logo.svg" alt="Azure Logo" class="h-6 mr-2">
+                Azure
+            </h1>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="#features" class="text-white font-medium hover:text-blue-200">Features</a></li>
+                    <li><a href="#testimonials" class="text-white font-medium hover:text-blue-200">Testimonials</a></li>
+                    <li><a href="#contact" class="text-white font-medium hover:text-blue-200">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="bg-white text-blue-600 py-2 px-6 rounded-lg font-semibold hover:bg-gray-200">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-between py-24 bg-blue-100">
+        <div class="container mx-auto flex flex-col md:flex-row items-center px-6">
+            <div class="hero-content text-center md:text-left md:w-1/2">
+                <h1 class="text-4xl font-semibold mb-4 text-blue-800">Welcome to Microsoft Azure</h1>
+                <p class="text-lg italic mb-4 text-blue-700">Empower your business with the cloud platform built for innovation and growth.</p>
+                <a href="#features" class="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-500">Explore Features</a>
+            </div>
+            <div class="hero-image mt-8 md:mt-0 md:w-1/2">
+                <img src="https://azure.microsoft.com/svghandler/azure-logo.svg" alt="Azure Cloud" class="rounded-xl shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features py-24 bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-800 mb-12">Our Features</h2>
+            <div class="features-grid grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="feature bg-blue-50 p-6 rounded-lg shadow-lg">
+                    <img src="https://azure.microsoft.com/svghandler/cloud-services.svg" alt="Feature 1" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">Scalable Cloud Infrastructure</h3>
+                    <p class="text-blue-600">Easily scale your infrastructure and applications with Azure's reliable cloud services.</p>
+                </div>
+                <div class="feature bg-blue-50 p-6 rounded-lg shadow-lg">
+                    <img src="https://azure.microsoft.com/svghandler/ai-services.svg" alt="Feature 2" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">AI & Machine Learning</h3>
+                    <p class="text-blue-600">Harness the power of AI and machine learning to drive intelligent business solutions.</p>
+                </div>
+                <div class="feature bg-blue-50 p-6 rounded-lg shadow-lg">
+                    <img src="https://azure.microsoft.com/svghandler/azure-security.svg" alt="Feature 3" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold text-blue-800 mb-2">Enterprise-Grade Security</h3>
+                    <p class="text-blue-600">Ensure the highest level of security for your data with Azure’s built-in security features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials py-24 bg-blue-600 text-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold mb-8">What Our Users Say</h2>
+            <div class="testimonial mb-8">
+                <p class="italic">"Azure transformed the way we scale our business. The tools and services are unmatched!"</p>
+                <h4 class="mt-4 font-semibold">- Jane Doe, CEO of Tech Solutions</h4>
+            </div>
+            <div class="testimonial mb-8">
+                <p class="italic">"The AI services on Azure helped us automate key processes and improve efficiency."</p>
+                <h4 class="mt-4 font-semibold">- John Smith, CTO of Innovate Corp</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact py-24 bg-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-800 mb-8">Get in Touch</h2>
+            <form action="https://azure.microsoft.com" method="GET" class="max-w-xl mx-auto">
+                <input type="text" name="name" placeholder="Your Name" required class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
+                <input type="email" name="email" placeholder="Your Email" required class="w-full p-3 mb-4 border border-gray-300 rounded-lg">
+                <textarea name="message" placeholder="Your Message" required class="w-full p-3 mb-4 border border-gray-300 rounded-lg"></textarea>
+                <button type="submit" class="bg-blue-600 text-white py-3 px-8 rounded-lg font-semibold hover:bg-blue-500">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-6 bg-blue-900 text-white text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2024 Microsoft Azure.Team 9</p>
+            <nav>
+                <ul class="flex justify-center space-x-8 mt-4">
+                    <li><a href="#" class="text-white hover:text-blue-400">Privacy Policy</a></li>
+                    <li><a href="#" class="text-white hover:text-blue-400">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
