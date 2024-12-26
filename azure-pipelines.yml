@@ -8,7 +8,7 @@ steps:
 # Step 1: Archive HTML files
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(Build.SourcesDirectory)' # Folder containing your HTML files
+    rootFolderOrFile: '$(Build.SourcesDirectory)'  # Folder containing your HTML files
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
@@ -23,7 +23,7 @@ steps:
 # Step 3: Deploy to Azure App Service
 - task: AzureRmWebAppDeployment@4
   inputs:
-    azureSubscription: '<YourAzureServiceConnection>' # Replace with your Azure Service Connection name
+    azureSubscription: 'bda0f92f-2a6b-4d08-a76c-f8d61d4c09de'  # Use your Service Connection ID or name here
     appType: 'webApp'
-    WebAppName: '<YourAppServiceName>' # Replace with your App Service name
+    WebAppName: 'front_end'  # Replace with your actual App Service name
     package: '$(Build.ArtifactStagingDirectory)/*.zip'
