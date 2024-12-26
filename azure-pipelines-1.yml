@@ -1,0 +1,29 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+# Step 1: Archive HTML files
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.SourcesDirectory)'  # Folder containing your HTML files
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
+# Step 2: Publish the archive as an artifact
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: 'drop'
+
+# Step 3: Deploy to Azure App Service
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    azureSubscription: 'bda0f92f-2a6b-4d08-a76c-f8d61d4c09de'  # Use your Service Connection ID or name here
+    appType: 'webApp'
+    WebAppName: 'html_deplyment'  # Replace with your actual App Service name
+    package: '$(Build.ArtifactStagingDirectory)/*.zip'
